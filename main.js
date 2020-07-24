@@ -22,8 +22,16 @@ randomize.onclick = () => {
     console.log(yItem)
     let zItem = randomValueFromArray(insertZ)
     console.log(zItem)
+    if (document.querySelector('uk').checked == true){
+      weight = '300 pounds'
+      temperature = '92 Fahrenheit'
+    }
+    else {
+      weight = '136 killograms'
+      temperature = '33 Celsius'
+    }
     let name = customName.value
-    let storyText = `It was 94 fahrenheit outside, so ${xItem} went for a walk. When they got to ${yItem}, they stared in horror for a few moments, then ${zItem}. ${name} saw the whole thing, but was not surprised — ${xItem} weighs 300 pounds, and it was a hot day.`
+    let storyText = `It was ${temperature} outside, so ${xItem} went for a walk. When they got to ${yItem}, they stared in horror for a few moments, then ${zItem}. ${name} saw the whole thing, but was not surprised — ${xItem} weighs ${weight}, and it was a hot day.`
     
     if(name !==''){
       story.style.visibility = 'visible'
