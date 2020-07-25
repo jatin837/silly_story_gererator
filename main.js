@@ -16,13 +16,16 @@ const insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewal
 
 
 randomize.onclick = () => {
+    let weight, temperature;
+
     let xItem = randomValueFromArray(insertX)
     console.log(xItem)
     let yItem = randomValueFromArray(insertY)
     console.log(yItem)
     let zItem = randomValueFromArray(insertZ)
     console.log(zItem)
-    if (document.querySelector('uk').checked == true){
+    console.log(document.querySelector('#uk').checked)
+    if (document.querySelector('#uk').checked == true){
       weight = '300 pounds'
       temperature = '92 Fahrenheit'
     }
